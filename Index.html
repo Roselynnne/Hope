@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Patient Registration Form</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f6f9;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            width: 600px;
+            max-width: 100%;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #1f4e79;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 10px 5px;
+            border: none;
+        }
+
+        td:first-child {
+            width: 40%;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        input[type="tel"]:focus {
+            border-color: #1f4e79;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .buttons {
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 10px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 15px;
+            margin: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #1f4e79;
+            color: white;
+        }
+
+        input[type="reset"] {
+            background-color: #777;
+            color: white;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #163a5c;
+        }
+
+        input[type="reset"]:hover {
+            background-color: #555;
+        }
+
+        .health-options {
+            line-height: 1.8;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Patient Registration Form</h2>
+
+    <form action="" method="post" name="registration">
+
+        <table>
+
+            <tr>
+                <td>1. Patient Name:</td>
+                <td>
+                    <input type="text"
+                           name="Patientname"
+                           placeholder="Enter patient name here"
+                           maxlength="30">
+                </td>
+            </tr>
+
+            <tr>
+                <td>2. Age:</td>
+                <td>
+                    <input type="number"
+                           name="age"
+                           placeholder="Enter patient age"
+                           min="0"
+                           max="120">
+                </td>
+            </tr>
+
+            <tr>
+                <td>3. Patient Gender:</td>
+                <td>
+                    <input type="radio"
+                           name="patient_gender"
+                           value="Male"
+                           checked>
+                    Male
+
+                    <input type="radio"
+                           name="patient_gender"
+                           value="Female">
+                    Female
+                </td>
+            </tr>
+
+            <tr>
+                <td>4. ID Number:</td>
+                <td>
+                    <input type="text"
+                           name="id_number"
+                           placeholder="Enter ID number"
+                           maxlength="15">
+                </td>
+            </tr>
+
+            <tr>
+                <td>5. Phone Number:</td>
+                <td>
+                    <input type="tel"
+                           name="phone_number"
+                           placeholder="Enter phone number"
+                           maxlength="10">
+                </td>
+            </tr>
+
+            <tr>
+                <td>6. Health Status:</td>
+                <td class="health-options">
+
+                    <input type="checkbox"
+                           name="service[]"
+                           value="Health">
+                    Health<br>
+
+                    <input type="checkbox"
+                           name="service[]"
+                           value="Acute illness">
+                    Acute illness<br>
+
+                    <input type="checkbox"
+                           name="service[]"
+                           value="Chronic illness">
+                    Chronic illness<br>
+
+                    <input type="checkbox"
+                           name="service[]"
+                           value="Recovering">
+                    Recovering
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>7. Marital Status:</td>
+                <td>
+                    <input type="radio"
+                           name="status"
+                           value="Single"
+                           checked>
+                    Single
+
+                    <input type="radio"
+                           name="status"
+                           value="Married">
+                    Married
+                </td>
+            </tr>
+
+            <tr>
+                <td>8. Next of Kin:</td>
+                <td>
+                    <input type="text"
+                           name="next_of_kin"
+                           placeholder="Enter name here"
+                           maxlength="30">
+                </td>
+            </tr>
+
+            <tr>
+                <td>9. Weight:</td>
+                <td>
+                    <input type="number"
+                           name="weight"
+                           placeholder="Enter weight"
+                           min="0">
+                </td>
+            </tr>
+
+            <tr>
+                <td>10. Patient ID:</td>
+                <td>
+                    <input type="text"
+                           name="patient_id"
+                           placeholder="Enter patient ID"
+                           maxlength="30">
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" class="buttons">
+                    <input type="submit" value="Register">
+                    <input type="reset" value="Clear">
+                </td>
+            </tr>
+
+        </table>
+
+    </form>
+
+</div>
+
+</body>
+</html>
